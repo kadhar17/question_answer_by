@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<title>{{title}}</title>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script src="./js/angular.js"></script>
+	<script type="text/javascript" src="./js/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<link rel="shortcut icon" href="./images/favicon.png">
+	<script type="text/javascript" src="./js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+
+</head>
+<body>
+	<div class="navbart">
+		<h2 class="navtit">id: {{appId}} </h2>
+	</div>
+
+	<div class="container" id="textpart" ng-controller="mycontroller">
+		<div id="main"> 
+			<div ng-repeat="(key,value) in mydata track by $index">
+
+				<div id="mydata{{$index+1}}" > <!-- ng-if="listid==$index" ng-class="divCont" -->
+
+					<div id="question" ng-if="key==1">
+						<h3 class="md-title">Question:</h3>
+
+						<div ng-class="hm-question" ng-repeat="ques in mydata[key]">
+
+							<div ng-if="ques.type=='obj'">
+								<div ng-repeat="cont in ques.content">
+									<div ng-if="cont.type=='image'">
+										<img class="img-responsive" src="{{cont.content}}"/>
+									</div>
+									<div ng-if="cont.type=='text'">
+										{{cont.content}}
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<br/>
+						<button id="showsolution"> View answer </button>
+					</div>
+
+
+					<div id="solution{{$index+1}}" ng-if="key>1">
+						<h3 ng-if="key==2" class="md-title">Solution:</h3>
+						<div  ng-repeat="step in mydata[key]">
+
+							<div ng-repeat="cont in step.content">
+								{{cont.content}}<br/>
+							</div>
+
+						</div>
+						<br/>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<!-- <div id="banner">
+
+		</div>
+ -->
+
+		<!-- <div id="outline">
+		</div> -->
+
+		
+		<button type="button" id="modelbtn" data-toggle="modal" data-target="#myModal">Question</button>
+		<button id="replay">Replay</button>
+		<button id="play">Play</button>
+		<button id="next">Next</button>
+		<button id="prev">Prev</button>
+
+
+		<!-- <button type="button" class="btn btn-info btn-lg topclickbtn" data-toggle="modal" data-target="#myModal">Question</button> -->
+
+		<!-- <button class="topclickbtn" ng-click="onclicktop">Top</button> -->
+
+
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Question:</h4>
+					</div>
+					<div class="modal-body" ng-controller="mycontroller">
+
+						<div ng-class="hm-question" ng-repeat="ques in mydata[1]">
+
+							<div ng-if="ques.type=='obj'">
+								<div ng-repeat="cont in ques.content">
+									<div ng-if="cont.type=='image'">
+										<img class="img-responsive" src="{{cont.content}}"/>
+									</div>
+									<div ng-if="cont.type=='text'">
+										{{cont.content}}
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default close" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+</body>
+
+
+
+</html>
+
+
