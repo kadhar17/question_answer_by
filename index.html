@@ -32,7 +32,7 @@
 		<div id="main"> 
 			<div ng-repeat="(key,value) in mydata track by $index">
 
-				<div id="mydata{{$index+1}}">
+				<div id="mydata{{$index+1}}" >
 
 					<div id="solution{{$index+1}}" id="question" ng-if="key==1">
 						<h3 class="md-title">Question:</h3>
@@ -52,8 +52,11 @@
 								</div>
 							</div>
 						</div>
-						
-						<button id="showsolution"> View answer </button>
+						<div>
+							<button ng-if="animate=='true'" id="showanswer" data-toggle="modal" data-target="#myModal1"> Answer </button>
+							<button ng-if="animate=='true'" id="showsolution"> Solution </button>
+						</div>
+						<div class="clearfix"></div>
 					</div>
 
 
@@ -84,11 +87,9 @@
 		</div>
 		
 		
-		<button type="button" id="modelbtn" data-toggle="modal" data-target="#myModal">Question</button>
-		<button id="replay">Replay</button>
-		<button id="play">Play</button>
-		<button id="next">Next</button>
-		<button id="prev">Prev</button>
+		<button ng-if="animate=='true'" type="button" id="modelbtn" data-toggle="modal" data-target="#myModal">Question</button>
+		<button ng-if="animate=='true'" id="replay">Replay</button>
+		<button ng-if="animate=='true'" id="play">Play</button>
 
 		<div class="modal fade" id="myModal" role="dialog">
 			<div class="modal-dialog">
@@ -117,7 +118,33 @@
 
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default close" data-dismiss="modal">Close</button>
+						<!-- <button type="button" class="btn btn-default close" data-dismiss="modal">Close</button> -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="modal fade" id="myModal1" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Answer:</h4>
+					</div>
+					<div class="modal-body" ng-controller="mycontroller">
+						<div ng-class="hm-answer" ng-repeat="answr in actdata.info.step0.answer">
+
+							<div ng-bind="answr.ans">
+								
+							</div>
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<!-- <button type="button" class="btn btn-default close" data-dismiss="modal">Close</button> -->
 					</div>
 				</div>
 

@@ -25,7 +25,7 @@ html,body {
 	width: 100%;
 	color: white;
 	z-index: 1000;
-	user-select: none;
+	/*user-select: none;*/
 }
 
 
@@ -111,8 +111,9 @@ html,body {
  box-shadow: 0 3px 5px 0 rgba(0,0,0,.26);
 }
 
-#showsolution{
-  width: 120px;
+#showsolution,#showanswer{
+  float: left;
+  width: 80px;
   margin: 5px;
   padding: 5px;
   height: 40px;
@@ -163,6 +164,9 @@ html,body {
 
 }
 
+.clearfix{
+  clear:both;
+}
 
 hm-question .mjx-char.MJXc-TeX-math-I, hm-question .mjx-charbox.MJXc-TeX-math-I {
   font-family: Roboto,MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw;

@@ -83,12 +83,9 @@ $(document).ready(function(){
 	$("#next").css("visibility","hidden");
 	$("#replay").css("display","none");
 	$("#showsolution").css("display","none");
-	setTimeout(function(){
-		resizeFn()
-		playFn()
-		$("#play").css("display","none")
-
-	},500)
+	$("#showanswer").css("display","none");
+	
+	
 	
 });
 
@@ -110,6 +107,7 @@ function showsolutionFn(){
 	},fadeIntimer)
 
 	$("#showsolution").css("display","none");
+	$("#showanswer").css("display","none");
 	$("#play").css("display","block")
 	$("#main").css("overflow-y","hidden");
 }
@@ -123,6 +121,7 @@ function playFn(){
 			//$("#showsolution").trigger("click");
 			showsolutionFn()
 			$("#showsolution").css("display","block");
+			$("#showanswer").css("display","block");
 			$("#main").css("overflow-y","auto");
 		}
 		$("#play").text("Pause");
@@ -204,7 +203,7 @@ function showChain(idcnt) {
 			$("#solution"+ idcnt+"> div:eq(" + currentDiv + ")").fadeIn(eachdatashow);
 
 			increaseval+=$("#solution"+ idcnt+"> div:eq(" + currentDiv + ")").height();
-			//$("#main").animate({ scrollTop: (increaseval+"px") },1000);
+			$("#main").animate({ scrollTop: (increaseval+"px") },1000);
 			var eachdiv=$("#solution"+ idcnt+"> div:eq(" + currentDiv + ")").height()
 			currentDiv++;
 			//console.log("data "+$("#solution"+ idcnt+"> div:eq(" + currentDiv + ")").text().length);
@@ -248,6 +247,7 @@ function showChain(idcnt) {
 					$("#main").css("overflow-y","auto");
 				});
 				$("#main").fadeIn(finalfadein);
+				$("#main").animate({ scrollTop: (0) },1000);
 				
 			}
 		}

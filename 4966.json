@@ -1,0 +1,107 @@
+{
+	"info":{
+		"step0":
+		 {
+			"appId":"4966",
+			"animate":"true",
+			"answer":{
+				"0":{
+					"ans":"\\(40 \\%\\ \\)"
+				}
+			}
+		 }
+	},
+	"question": {
+		"step1":{
+			"0":{
+				"type":"obj",
+				"content":{
+					"0":{
+						"type":"text",
+						"content":"<div>Express \\(\\dfrac{12}{15}\\) as a percentage.</div>"
+					}
+				}
+			}
+		}
+	},
+	"solution": {
+		"step2":{
+			"0":{
+				"type":"table",
+				"content":{
+					"0":{
+						"type":"text",
+						"content":"<td style='border-style:solid; border-color:rgba(0,0,0,0); border-width:0px 2px;vertical-align:baseline; padding-top:0px' align='right' width='0'><span class='MathJax_Preview' style='display: none;'></span><span class='mjx-chtml MJXc-display' style='text-align: center;'><span id='MathJax-Element-110-Frame' class='mjx-chtml MathJax_CHTML' tabindex='-1' style='font-size: 103%; text-align: center; position: relative;' data-mathml='<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;><mrow><mn>15</mn></mrow></math>' role='presentation'><span id='MJXc-Node-538' class='mjx-math' aria-hidden='true'><span id='MJXc-Node-539' class='mjx-mrow'><span id='MJXc-Node-540' class='mjx-mrow'><span id='MJXc-Node-541' class='mjx-mn'><span class='mjx-char MJXc-TeX-main-R' style='padding-top: 0.367em; padding-bottom: 0.367em;'>15</span></span></span></span></span><span class='MJX_Assistive_MathML MJX_Assistive_MathML_Block' role='presentation'><math xmlns='http://www.w3.org/1998/Math/MathML' display='block'><mrow><mn>15</mn></mrow></math></span></span></span><script type='math/mml' id='MathJax-Element-110'><math xmlns='http://www.w3.org/1998/Math/MathML' display='block'><mrow><mn>15</mn></mrow></math></script> parts</td><span class='mjx-char MJXc-TeX-main-R' style='padding-top: 0.246em; padding-bottom: 0.367em;'>→</span><td style='border-style:solid; border-color:rgba(0,0,0,0); border-width:0px 2px;vertical-align:baseline; padding-top:0px' align='left' width='0'>100%</td>"
+					}
+				}
+			},
+			"1":{
+				"type":"obj",
+				"content":{
+					"0":{
+						"content":"<td style='border-style:solid; border-color:rgba(0,0,0,0); border-width:0px 2px;vertical-align:baseline; padding-top:0px' align='right' width='0'>1 part</td><span class='mjx-char MJXc-TeX-main-R' style='padding-top: 0.246em; padding-bottom: 0.367em;'>→</span>\\(\\dfrac{100}{15}\\)%</td>"
+					}
+				}
+			},
+			"2":{
+				"type":"obj",
+				"content":{
+					"0":{
+						"content":"<td style='border-style:solid; border-color:rgba(0,0,0,0); border-width:0px 2px;vertical-align:baseline; padding-top:0px' align='right' width='0'>12 parts</td><span class='mjx-char MJXc-TeX-main-R' style='padding-top: 0.246em; padding-bottom: 0.367em;'>→</span>12<span class='mjx-char MJXc-TeX-main-R' style='padding-top: 0.185em; padding-bottom: 0.306em;'>×</span>\\(\\dfrac{100}{15}\\)%= 80%</td>"
+					}
+				}
+			},
+			"3":{
+				"type":"obj",
+				"content":{
+					"0":{
+						"content":"<td style='border-style:solid; border-color:rgba(0,0,0,0); border-width:0px 2px;vertical-align:baseline; padding-top:0px' align='right' width='0'>So,\\(\\dfrac{12}{15}\\)= 80%</td>"
+					}
+				}
+			},
+			"4":{
+				"type":"obj",
+				"content":{
+					"0":{
+						"content":"<td style='border-style:solid; border-color:rgba(0,0,0,0); border-width:0px 2px;vertical-align:baseline; padding-top:0px' align='right' width='0'><b>Alternate method:</b> <br><br>First we write the fraction in its simplest form.</td>"
+					}
+				}
+			},
+			"5":{
+				"type":"obj",
+				"content":{
+					"0":{
+						"content":"<td style='border-style:solid; border-color:rgba(0,0,0,0); border-width:0px 2px;vertical-align:baseline; padding-top:0px' align='right' width='0'>\\(\\dfrac{12}{15}\\)= \\(\\dfrac{4}{5}\\)</td>"
+					}
+				}
+			},
+			"6":{
+				"type":"obj",
+				"content":{
+					"0":{
+						"content":"<td style='border-style:solid; border-color:rgba(0,0,0,0); border-width:0px 2px;vertical-align:baseline; padding-top:0px' align='right' width='0'><img src='data:image/png;base64,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'></td>"
+						
+					}
+				}
+			},
+			"7":{
+				"type":"obj",
+				"content":{
+					"0":{
+						"content":"<td style='border-style:solid; border-color:rgba(0,0,0,0); border-width:0px 2px;vertical-align:baseline; padding-top:0px' align='right' width='0'>= \\(\\dfrac{80}{100}\\)</td>"
+					}
+				}
+			},
+			"8":{
+				"type":"obj",
+				"content":{
+					"0":{
+						"content":"<td style='border-style:solid; border-color:rgba(0,0,0,0); border-width:0px 2px;vertical-align:baseline; padding-top:0px' align='right' width='0'>= 80%</td>"
+					}
+				}
+			}		
+		}
+	}
+}
+
+

@@ -1,6 +1,16 @@
 {
-	"appId":["10715"],
-
+	"info":{
+		"step0":
+		{
+			"appId":"10715",
+			"animate":"true",
+			"answer":{
+				"0":{
+					"ans":"\\( =\\,\\dfrac{4}{10}+0.01+\\dfrac{9}{1000} \\)"
+				}
+			}
+		}
+	},
 	"question": {
 		"step1":{
 			"0":{
