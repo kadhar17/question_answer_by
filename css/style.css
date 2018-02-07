@@ -1,5 +1,5 @@
 @font-face {
-	font-family: "Roboto-reg";
+	font-family: "Roboto";
 	font-style: normal;
 	src: url("../fonts/Roboto-Regular.ttf");
 }
@@ -9,11 +9,11 @@
 	src: url("../fonts/Roboto-Medium.ttf");
 }
 
-html {
+html,body {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
-  color: rgba(0,0,0,0.87);
+  color: rgba(0,0,0,0.87)!important;
   overflow: auto;
 }
 
@@ -74,8 +74,7 @@ html {
 
 
 #main div {
-  /* display: none;*/
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 #main{
@@ -83,10 +82,12 @@ html {
  overflow-y: auto;
  padding: 5px;
  margin: 5px;
- margin-top: 40px;
+ margin-top: 60px;
  padding-right: 20px;
  padding-left: 20px;
+ /*border: 1px solid #c7c7c7;*/
  border: 1px solid black;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #banner{
@@ -103,26 +104,23 @@ html {
  float: right; 
  margin: 5px;
  padding: 5px;
- /* margin-top: 120px; */
  width: 80px;
  height: 40px;
  font-size: 16px;
  border:1px solid #a2a2a2;
-
  box-shadow: 0 3px 5px 0 rgba(0,0,0,.26);
 }
 
 #showsolution{
   width: 120px;
-   margin: 5px;
- padding: 5px;
+  margin: 5px;
+  padding: 5px;
   height: 40px;
- font-size: 16px;
- border:1px solid #a2a2a2;
-
- box-shadow: 0 3px 5px 0 rgba(0,0,0,.26);
-/*  margin-top: -50px;
-  margin-right: 10px;*/
+  font-size: 16px;
+  border:1px solid #a2a2a2;
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,.26);
+  margin-top: 10px;
+  z-index: 500;
 }
 
 #replay:active {
@@ -162,9 +160,28 @@ html {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-   /* background-color: #f5f5f5;
-    border: 1px solid #e3e3e3;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);*/
-  }
+
+}
+
+
+hm-question .mjx-char.MJXc-TeX-math-I, hm-question .mjx-charbox.MJXc-TeX-math-I {
+  font-family: Roboto,MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw;
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+.scrollEqn {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+}
+
+
+table, th, td {
+  border:solid 1px #CCC;
+  padding:1px 3px;
+  font:15px Verdana;
+}
+th {
+  font-weight:bold;
+}

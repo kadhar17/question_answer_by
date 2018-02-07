@@ -1,0 +1,86 @@
+{
+	"appId":["17871"],
+
+	"question": {
+		"step1":{
+			"0":{
+				"type":"obj",
+				"content":{
+					"0":{
+						"type":"text",
+						"content":"The diagram shows a solid metal cylinder of diameter \\(14 \\text{ cm}\\) and height \\(25 \\text{ cm}\\). A cuboid of metal with a square end of \\(6 \\text{ cm}\\) wide and with \\(25 \\text{ cm}\\) height is hollowed out (i.e. a hole in the shape of a square is formed) as shown. (Take \\(\\pi = \\dfrac{22}{7}\\))"
+					},
+					"1":{
+						"type":"image",
+						"content":"./images/question1_img.png"
+					},
+					"2":{
+						"type":"text",
+						"content":"(a) Calculate the volume of the cylinder."
+					},
+					"3":{
+						"type":"text",
+						"content":"(b) Calculate the volume of remaining piece of metal after removing the cuboid"
+					}
+				}
+			}
+		}
+	},
+	"solution": {
+		"step2":{
+			"0":{
+				"type":"obj",
+				"content":{
+					"0":{
+						"type":"text",
+						"content":"Part (a):"
+					}
+				}
+			},
+			"1":{
+				"type":"obj",
+				"content":{
+					"0":{
+						"content":"\\begin{align} \\color{rgba(0,0,0,0.87)}{\\text {Radius of the cylinder}}\\, &=\\,\\dfrac{14}{2} \\\\ \\, &=\\,7 \\text{ cm} \\end{align}"
+					}
+				}
+			},
+			"2":{
+				"type":"obj",
+				"content":{
+					"0":{
+						"type":"text",
+						"content":"\\begin{align} \\color{rgba(0,0,0,0.87)}{\\text {Volume of the cylinder}}\\, &=\\,\\pi r^{2}h \\\\ \\, &=\\,\\dfrac{22}{7} \\times 7 \\times 7 \\times 25 \\\\ \\, &=\\,3850 \\text{ cm}^{3} \\end{align}"
+					}
+				}
+			}
+		},
+		"step3":{
+			"0":{
+				"type":"obj",
+				"content":{
+					"0":{
+						"type":"text",
+						"content":"Part (b):"
+					}
+				}
+			},
+			"1":{
+				"type":"obj",
+				"content":{
+					"0":{
+						"content":"\\begin{align} \\color{rgba(0,0,0,0.87)}{\\text {Volume of the cuboid}}\\, &=\\, 6 \\times 6 \\times 25 \\\\ &=\\, 900 \\text{ cm}^{3} \\end{align}"
+					}
+				}
+			},
+			"2":{
+				"type":"obj",
+				"content":{
+					"0":{
+						"content":"\\( \\color{rgba(0,0,0,0.87)}{\\text {Volume of the remaining piece of metal}}\\) \\begin{align} \\, &=\\, \\color{rgba(0,0,0,0.87)}{\\text {Volume of cylinder}} - \\color{rgba(0,0,0,0.87)}{\\text {Volume of cuboid}} \\\\ &=\\, 3850 - 900 \\\\ &=\\, 2950 \\text{ cm}^{3} \\end{align}"
+					}
+				}
+			}
+		}
+	}
+}
