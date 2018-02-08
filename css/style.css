@@ -100,7 +100,7 @@ html,body {
  text-align: center;
 }
 
-#replay,#play,#modelbtn,#prev,#next{
+#replay,#play,#modelbtn{
  float: right; 
  margin: 5px;
  padding: 5px;

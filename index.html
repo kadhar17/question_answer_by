@@ -10,7 +10,6 @@
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 	<link rel="shortcut icon" href="./images/favicon.png">
 	<link rel="stylesheet" type="text/css" href="./css/style.css"/>
-	<script type="text/javascript" src="./js/main.js"></script>
 
 	<script type="text/x-mathjax-config">
 		MathJax.Hub.Config({
@@ -20,6 +19,7 @@
 		displayIndent: "0.1em"
 	});
 </script>
+
 <script type="text/javascript" src="./js/MathJax-2.6/MathJax.js?config=TeX-AMS_HTML-full"></script>
 
 </head>
@@ -27,9 +27,12 @@
 	<div class="navbart">
 		<h2 class="navtit" ng-bind="'id:'+appId">loading...</h2>
 	</div>
-
+	
 	<div class="container" id="textpart" ng-controller="mycontroller">
+		<span><resizedir></resizedir></span>
 		<div id="main"> 
+
+
 			<div ng-repeat="(key,value) in mydata track by $index">
 
 				<div id="mydata{{$index+1}}" >
@@ -54,7 +57,7 @@
 						</div>
 						<div>
 							<button ng-if="animate=='true'" id="showanswer" data-toggle="modal" data-target="#myModal1"> Answer </button>
-							<button ng-if="animate=='true'" id="showsolution"> Solution </button>
+							<button ng-if="animate=='true'" ng-click="showsolutionFn()" id="showsolution"> Solution </button>
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -87,9 +90,9 @@
 		</div>
 		
 		
-		<button ng-if="animate=='true'" type="button" id="modelbtn" data-toggle="modal" data-target="#myModal">Question</button>
-		<button ng-if="animate=='true'" id="replay">Replay</button>
-		<button ng-if="animate=='true'" id="play">Play</button>
+		<button ng-if="animate=='true'" type="button" id="modelbtn" ng-click="modelopen()" data-toggle="modal" data-target="#myModal">Question</button>
+		<button ng-if="animate=='true'" ng-click="replayFn()" id="replay">Replay</button>
+		<button ng-if="animate=='true'" ng-click="playFn()" id="play">Play</button>
 
 		<div class="modal fade" id="myModal" role="dialog">
 			<div class="modal-dialog">
@@ -97,7 +100,7 @@
 				<!-- Modal content-->
 				<div class="modal-content">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<button type="button" ng-click="modelclose()" class="close" data-dismiss="modal">&times;</button>
 						<h4 class="modal-title">Question:</h4>
 					</div>
 					<div class="modal-body" ng-controller="mycontroller">
@@ -151,14 +154,9 @@
 			</div>
 		</div>
 
-
 	</div>
-</div>
 
 </body>
-
-
-
 </html>
 
 
